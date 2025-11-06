@@ -32,7 +32,7 @@ jobs:
         run: |
           echo "Building for architecture: ${{ matrix.arch }}"
           rm -rf build dist || true
-          pyinstaller --onefile user_audit/cli.py --name user-audit
+          pyinstaller --onefile user_audit/src/cli.py --name user-audit
           mv dist/user-audit "dist/user-audit-linux-${{ matrix.arch }}"
           ls -lh dist/
 
